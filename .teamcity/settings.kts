@@ -39,5 +39,10 @@ object NewTest : BuildType({
             id = "simpleRunner"
             scriptContent = """echo "Hello""""
         }
+        script {
+            name = "echo hello_world"
+            id = "echo_hello_world"
+            scriptContent = """echo "Hello World""""
+        }
     }
 })
