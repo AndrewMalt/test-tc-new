@@ -51,4 +51,12 @@ object NewTest : BuildType({
 
 object SecondBuild : BuildType({
     name = "second_build"
+
+    steps {
+        script {
+            name = "echo hello_world_2"
+            id = "echo_hello_world_2"
+            scriptContent = """echo "hello_world_2""""
+        }
+    }
 })
