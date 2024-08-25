@@ -28,6 +28,7 @@ version = "2024.03"
 project {
 
     buildType(NewTest)
+    buildType(SecondBuild)
 }
 
 object NewTest : BuildType({
@@ -46,4 +47,8 @@ object NewTest : BuildType({
             scriptContent = """echo "Hello World""""
         }
     }
+})
+
+object SecondBuild : BuildType({
+    name = "second_build"
 })
