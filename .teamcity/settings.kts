@@ -29,6 +29,7 @@ project {
 
     buildType(NewTest)
     buildType(SecondBuild)
+    buildType(ThirdBuild)
 }
 
 object NewTest : BuildType({
@@ -57,6 +58,30 @@ object SecondBuild : BuildType({
             name = "echo hello_world_2"
             id = "echo_hello_world_2"
             scriptContent = """echo "hello_world_2""""
+        }
+    }
+})
+
+object ThirdBuild : BuildType({
+    name = "third_build"
+
+    steps {
+        script {
+            name = "echo status"
+            id = "simpleRunner"
+            executionMode = BuildStep.ExecutionMode.ALWAYS
+            scriptContent = """echo "Hello""""
+        }
+        script {
+            name = "echo hello_world2"
+            id = "echo_hello_world2"
+            scriptContent = """echo "Hello World2""""
+        }
+        script {
+            name = "echo hello_world3"
+            id = "echo_hello_world3"
+            executionMode = BuildStep.ExecutionMode.ALWAYS
+            scriptContent = """echo "Hello World3""""
         }
     }
 })
