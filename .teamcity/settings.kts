@@ -35,6 +35,7 @@ object NewTest : BuildType({
 
     steps {
         script {
+            name = "echo status"
             id = "simpleRunner"
             scriptContent = """echo "Hello""""
         }
