@@ -37,6 +37,7 @@ object NewTest : BuildType({
         script {
             name = "echo status"
             id = "simpleRunner"
+            executionMode = BuildStep.ExecutionMode.ALWAYS
             scriptContent = """echo "Hello""""
         }
         script {
