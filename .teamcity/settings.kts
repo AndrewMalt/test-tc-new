@@ -6,9 +6,9 @@ import jetbrains.buildServer.configs.kotlin.buildSteps.script
 object Tests : BuildType({
     name = "tests"
 
-    vcs {
-        root(TeamCityCucumberPlugin)
-    }
+//    vcs {
+//        root(TeamCityCucumberPlugin)
+//    }
 
     steps {
         script {
